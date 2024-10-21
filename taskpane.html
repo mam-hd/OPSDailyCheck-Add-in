@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="MessageBanner.css">
+</head>
+
+<body>
+    <iframe id="canvas-iframe" width="100%" height="600px"></iframe>
+</body>
+
+<script>
+    Office.initialize = function (reason) {
+        $(document).ready(function () {
+            var appId = "82b6aa0b-e82b-477e-8a07-77ff24cef8b1";
+            $('#canvas-iframe').attr("src", "https://apps.powerapps.com/play/" + appId + "?source=iframe");
+        });
+    };
+</script>
+
+</html>
